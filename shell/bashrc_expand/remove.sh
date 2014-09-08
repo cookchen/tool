@@ -1,5 +1,5 @@
 iRA_CNT=$#
-TRASH_DIR="/home/chenji.cc/.trash"
+TRASH_DIR="~/.trash"
 
 for i in $*; do
     STAMP=`date +%s`

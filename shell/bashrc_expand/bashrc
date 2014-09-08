@@ -1,0 +1,40 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+#export HADOOP_HOME=/home/a/libexec64/hadoop/current
+export HADOOP_HOME="/home/yunti/hadoop-current/"
+
+export HADOOP_CONF_DIR=~/hadoop-conf
+#alias hadoop='$HADOOP_HOME/bin/hadoop --config ~/conf'
+alias hadoop='$HADOOP_HOME/bin/hadoop --config ~/hadoop-conf'
+alias hadoop_streaming='hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.19.2-streaming.jar'
+alias hdfs='hadoop fs'
+alias hdls='hdfs -ls'
+alias hdcat='hdfs -cat'
+alias hdtext='hdfs -text'
+alias hdjk='hadoop job -kill'
+alias protoc='~/bin/protoc'
+
+alias rm="sh ~/tool/shell/remove.sh"
+alias ossput="sh ~/tool/shell/osscmd_expand.sh put"
+alias ossget="sh ~/tool/shell/osscmd_expand.sh get"
+alias ossdget="sh ~/tool/shell/osscmd_expand.sh getdir"
+alias ossdput="sh ~/tool/shell/osscmd_expand.sh putdir"
+alias ossdput="sh ~/tool/shell/osscmd_expand.sh putdir"
+
+export HIVE_HOME=~/hive/hive-0.6.0
+export HIVE_CONF_DIR=$HIVE_HOME/conf
+alias hive=${HIVE_HOME}/bin/hive
+
+export JAVA_HOME=/usr/java/default
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cacert.pem
+
+#test -r ~/.dircolors && eval '$(dircolors -b ~/.dircolors)'|| eval '$(dircolors -b)'

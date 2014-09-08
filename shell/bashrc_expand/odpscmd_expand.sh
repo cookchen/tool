@@ -1,13 +1,14 @@
 #!/bin/bash
 
-if [ $# -eq 1 ]; then
-    odpscmd  -e "$1"
-fi
+source ~/.bashrc
 
-if [ "$1"x = "read" ]; then$
+set -x
+
+if [ "$1"x = "readx" ]
+then
     odpscmd -e "read $2 partition(ds='$3')"
-else$
-    echo "usage: $0 tablename partition"$
-fi$
+else
+    odpscmd -e "$*"
+fi
 
 exit 0

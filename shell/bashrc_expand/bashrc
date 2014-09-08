@@ -21,12 +21,14 @@ alias hdtext='hdfs -text'
 alias hdjk='hadoop job -kill'
 alias protoc='~/bin/protoc'
 
-alias rm="sh ~/tool/shell/remove.sh"
-alias ossput="sh ~/tool/shell/osscmd_expand.sh put"
-alias ossget="sh ~/tool/shell/osscmd_expand.sh get"
-alias ossdget="sh ~/tool/shell/osscmd_expand.sh getdir"
-alias ossdput="sh ~/tool/shell/osscmd_expand.sh putdir"
-alias ossdput="sh ~/tool/shell/osscmd_expand.sh putdir"
+alias rm="sh ~/tool/shell/bashrc_expand/remove.sh"
+alias ossput="sh ~/tool/shell/bashrc_expand/osscmd_expand.sh put"
+alias ossget="sh ~/tool/shell/bashrc_expand/osscmd_expand.sh get"
+alias ossdget="sh ~/tool/shell/bashrc_expand/osscmd_expand.sh getdir"
+alias ossdput="sh ~/tool/shell/bashrc_expand/osscmd_expand.sh putdir"
+alias ossdput="sh ~/tool/shell/bashrc_expand/osscmd_expand.sh putdir"
+alias odpscmd="~/odps_clt/bin/odpscmd"
+alias odps="sh ~/tool/shell/bashrc_expand/odpscmd_expand.sh"
 
 export HIVE_HOME=~/hive/hive-0.6.0
 export HIVE_CONF_DIR=$HIVE_HOME/conf
